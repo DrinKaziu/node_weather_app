@@ -39,6 +39,22 @@ app.get('/help', (req, res) => {
   });
 });
 
+app.get('/help/*', (req, res) => {
+  res.render('404', {
+    name: 'Drin Kaziu', 
+    title: '404', 
+    errorMessage: 'Help Article not found'
+  });
+});
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    name: 'Drin Kaziu', 
+    title: '404', 
+    errorMessage: 'Page Not Found'
+  });
+});
+
 app.listen(3000, () => {
   console.log('Server is listening on port 3000');
 });
