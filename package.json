@@ -18,6 +18,8 @@
   "homepage": "https://github.com/DrinKaziu/node_weather_app#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "path": "^0.12.7",
     "request": "^2.88.0"
   }
 }
