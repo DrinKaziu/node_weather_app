@@ -25,11 +25,18 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.send('This will be the about page');
+  res.render('about', {
+    name: 'Drin Kaziu',
+    title: 'About',
+  });
 });
 
 app.get('/help', (req, res) => {
-  res.send('This will be the help page');
+  res.render('help', {
+    name: 'Drin Kaziu', 
+    title: 'Help', 
+    message: 'What can I help you with?'
+  });
 });
 
 app.listen(3000, () => {
